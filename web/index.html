@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>WebRTC</title>
+	<link rel="stylesheet" href="vendor/foundation/css/foundation.css" />
+	<link rel="stylesheet" href="stylesheets/style.css" />
+	<script src="vendor/socket/socket.io.js"></script>
+    <script src="vendor/modernizr/modernizr.js"></script>
+    <script src="//static.opentok.com/v2/js/opentok.min.js"></script>
+</head>
+
+<body>
+
+	<div id="main">
+		
+		<div id="index">
+			
+			<label for="room-name">Enter your room name</label> <input type="text" id="room-name"> <br>
+			<label for="room-name">Enter your nick name</label> <input type="text" id="nick-name"> <br>
+			<a href="#" id="enter-room" class="button tiny"> Enter </a>
+
+			<br>
+			<span class="error-text"></span>
+
+		</div>
+
+		<div id="members-wrap" class="hide">
+
+			<h3 id="basic-info">Hi <span id="my-nick-name"></span></h3>
+			
+			<p id="no-members"> Waiting for other members to join</p>
+
+			<div id="members-list-wrap">
+
+				People who are online...	
+				
+				<ul id="member-list">
+					
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div id="media" class="hide">
+
+			<div id="video-wrap" class="hide">
+
+				<div id="video-call">
+					<div id="my-video"></div>
+					<div id="their-video"></div>
+
+					<a href="#" id="start-recording" class="button tiny"> Start Recording </a>
+					<a href="#" id="stop-recording" class="button tiny hide"> Stop Recording </a>
+					<a href="#" id="end-call" class="button tiny"> End Call </a>
+				</div>
+
+				<div id="video-history-wrap" class="hide">
+					<a href="#" id="play-video"> Play the video </a>
+					<a href="#" id="return-menu"> Return to Main Menu </a>
+
+					<video id="video-history" controls style="width:778px;height:576px;"></video>
+
+				</div>
+
+			</div>
+
+			<div id="audio-wrap" class="hide">
+
+				<div id="audio-call">
+					<div id="my-audio"></div>
+					<div id="their-audio"></div>
+
+					<a href="#" id="start-recording" class="button tiny"> Start Recording </a>
+					<a href="#" id="stop-recording" class="button tiny hide"> Stop Recording </a>
+					<a href="#" id="end-call" class="button tiny"> End Call </a>
+				</div>
+
+				<!-- <div id="audio-history-wrap" class="hide">
+					<a href="#" id="play-audio"> Play the audio </a>
+					<a href="#" id="return-menu"> Return to Main Menu </a>
+
+					<video id="video-history" controls style="width:778px;height:576px;"></video>
+
+				</div> -->
+
+			</div>
+		</div>
+
+		<div id="text-wrap" class="hide">
+				
+			<div id="chat1" class="chat-wrap">
+				<div class="chats"></div>
+				<input type="text" id="post-chat" class="post-chat">	
+			</div>
+		</div>
+
+	</div>
+
+
+	<div id="media-modal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+	  	
+	</div>
+
+
+	<script type="text/javascript" data-main="js/main" src="vendor/require/require.js"></script>
+
+</body>
+</html>

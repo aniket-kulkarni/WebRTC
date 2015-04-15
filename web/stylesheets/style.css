@@ -1,0 +1,77 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+label {
+	display: inline-block;
+}
+
+#room-name,#nick-name {
+	width: 200px;
+	display: inline-block;
+}
+
+.hide {
+	display: none !important;
+}
+
+#members-list-wrap {
+	margin-top: 30px;
+}
+
+#member-list {
+	margin-top: 10px;
+	margin-left: 0;
+}
+
+#member-list > li {
+	list-style-type: none;
+	margin-top: 10px;
+}
+
+.nick-name {
+	width: 200px;
+	border: 1px solid;
+	height: 40px;
+	padding-top: 5px;
+	padding-left: 10px;		
+	display: inline-block;
+}
+
+.call-type {
+	cursor: pointer;
+	margin-left: 10px;
+	display: inline-block;	
+}
+
+#reject-video-call {
+	margin-left: 10px;
+}
+
+#text-wrap {
+	position: absolute;
+	bottom: 0;
+}
+
+.chat-wrap {
+	width: 300px;
+ 	border: 1px solid;
+  	height: 350px;
+  	position: relative
+}
+
+.post-chat {
+	position: absolute;
+	bottom: 0;
+}
+
+.chats {
+	height: 290px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.chats > p {
+	margin-bottom: 5px;
+}
